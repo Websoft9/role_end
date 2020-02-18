@@ -18,9 +18,9 @@
     shell: waagent -deprovision+user --force  
     when: cloud.stdout == 'azure'
 
-  when: init == '1' and init == 1
+  when: init == '1' or init == 1
 
 
 - name: Reboot 
   reboot:
-  when: init == '0' and init == 0
+  when: init == '0' or init == 0
