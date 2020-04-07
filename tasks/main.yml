@@ -20,7 +20,7 @@
 
   when: init == '1' or init == 1
 
-
+# when ansible running as local, reboot can't use
 - name: Reboot 
   reboot:
   when: init == '0' or init == 0
