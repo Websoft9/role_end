@@ -24,4 +24,3 @@
 - name: Reboot 
   reboot:
   when: init == '0' or init == 0
-  ignore_errors: yes
