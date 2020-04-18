@@ -1,3 +1,7 @@
+# 
+- hostname:
+    name: websoft9image
+    
 # print ports
 - block:
   - name: Check all Ports
