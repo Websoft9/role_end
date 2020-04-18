@@ -1,3 +1,10 @@
+# print ports
+- block:
+  - name: Check all Ports
+    shell: netstat -tunlp
+    register: check_ports
+    notify: check_ports
+
 - block:
   - name: Check Cloud
     shell : |
