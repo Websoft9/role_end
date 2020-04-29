@@ -1,7 +1,7 @@
 # print ports
 - block:
   - name: Check all Ports
-    shell: netstat -tunlp
+    shell: netstat -tln | awk '{print $4}'
     register: end_check_ports
     notify: end_check_ports
 
