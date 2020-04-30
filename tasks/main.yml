@@ -9,8 +9,6 @@
     shell: cat /data/logs/install_version.txt 2>/dev/null
     register: end_check_versions
     notify: end_check_versions
-  
-  - debug: msg="the value of foo.txt is {{lookup('file', '/data/logs/install_version.txt') }}"
 
 
 - block:
