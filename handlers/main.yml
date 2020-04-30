@@ -5,4 +5,4 @@
     
 - name: end_check_versions
   debug:
-    var: "{{ end_check_versions.stdout | to_json }}"
+    var: "{{ end_check_versions.stdout | to_nice_yaml }}"
