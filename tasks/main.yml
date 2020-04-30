@@ -5,10 +5,10 @@
     register: end_check_ports
     notify: end_check_ports
     
-  - name: Display all version
+  - name: Display all versions
     shell: cat /data/logs/install_version.txt
-    register: end_check_version
-    notify: end_check_version
+    register: end_check_versions
+    notify: end_check_versions
 
 - block:
   - name: Check Cloud
