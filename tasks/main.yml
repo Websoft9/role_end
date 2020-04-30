@@ -1,9 +1,14 @@
-# print ports
+# print ports and version
 - block:
   - name: Check all Ports
     shell: netstat -tln | awk '{print $4}'
     register: end_check_ports
     notify: end_check_ports
+    
+  - name: Display all version
+    shell: cat /data/logs/install_version.txt
+    register: end_check_version
+    notify: end_check_version
 
 - block:
   - name: Check Cloud
