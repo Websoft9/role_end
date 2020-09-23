@@ -20,6 +20,9 @@
       if [ -f "/usr/bin/amazon-ssm-agent" ];then echo "aws";fi
       if [ -d "/CloudrResetPwdAgent" ];then echo "huaiwei";fi
     register: cloud
+    
+  - debug:
+    msg: "Cloud platform is {{ cloud.stdout}}"
 
   - name: Remove SSH info
     shell: sudo rm -rf {{item}}
