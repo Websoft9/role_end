@@ -22,7 +22,7 @@
     register: cloud
     
   - debug:
-    msg: "Cloud platform is {{ cloud.stdout}}"
+      msg: "Cloud platform is {{cloud.stdout}}"
 
   - name: Remove SSH info
     shell: sudo rm -rf {{item}}
