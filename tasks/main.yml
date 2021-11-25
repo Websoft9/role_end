@@ -32,7 +32,9 @@
       - /etc/ssh/ssh_host*
   
   - name: Init for azure
-    shell: waagent -deprovision+user --force  
+    shell: |
+      cloud-init clean
+      waagent -deprovision+websoft9 --force  
     when: cloud.stdout == 'azure'
 
   when: init == '1' or init == 1
