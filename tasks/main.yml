@@ -15,10 +15,10 @@
   - name: Check Cloud
     shell : |
       if [ -f "/etc/waagent.conf" ];then echo "azure";fi
-      if [ -d "/usr/local/aegis" ];then echo "alicloud";fi
+      if [ -d "/usr/local/aegis" ];then echo "alibabacloud";fi
       if [ -f "/snap/bin/amazon-ssm-agent.ssm-cli" ];then echo "aws";fi
       if [ -f "/usr/bin/amazon-ssm-agent" ];then echo "aws";fi
-      if [ -d "/CloudrResetPwdAgent" ];then echo "huaiwei";fi
+      if [ -d "/CloudrResetPwdAgent" ];then echo "huaiweicloud";fi
     register: cloud
     
   - debug:
