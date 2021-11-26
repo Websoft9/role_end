@@ -34,7 +34,9 @@
   - name: Init for azure
     shell: |
       cloud-init clean
-      waagent -deprovision+websoft9 --force  
+      waagent -deprovision+websoft9 --force
+      systemctl disable waagent
+      userdel -r websoft9
     when: cloud.stdout == 'azure'
 
   when: init == '1' or init == 1
