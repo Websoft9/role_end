@@ -34,7 +34,7 @@
   - name: Init for azure
     shell: |
       cloud-init clean
-      waagent -deprovision+root --force
+      waagent -deprovision++user --force
     when: cloud.stdout == 'azure'
 
   when: init == '1' or init == 1
